@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shwokath Introduction to REST API 2</title>
+  <meta name="author" content="Showkath">
+  <meta name="author" content="Showkath" href="https://www.linkedin.com/in/showkath/">
+  <meta name="publisher" content="Showkath" email="iamshowkath@gmail.com">
+</head>
+<body>
+  <h1>Introduction to REST API</h1>
+  <p>REST (Representational State Transfer) API is a standard for building web services that allow clients to interact with server resources over the HTTP protocol.</p>
+
+  <h2>Basic Example: Fetching User Data</h2>
+  <p>Let's consider a simple example of a REST API endpoint that provides user data in JSON format.</p>
+  <button onclick="getUserData()">Fetch User Data</button>
+  <pre id="userDataResult"></pre>
+
+  <h2>Real-Time Use Case Examples</h2>
+  <ul>
+    <li>Fetching weather data from a weather API to display current weather conditions.</li>
+    <li>Fetching news articles from a news API to display the latest news on a website.</li>
+    <li>Fetching user data from a user management API for authentication and authorization purposes.</li>
+  </ul>
+
+  <h2>Important Concepts</h2>
+  <h3>1. Promises</h3>
+  <p>Promise is a JavaScript object representing the eventual completion or failure of an asynchronous operation, and its resulting value.</p>
+  <p>Example:</p>
+  <pre>
+    const fetchData = new Promise((resolve, reject) => {
+      // Simulating async data fetching
+      setTimeout(() => {
+        const data = { id: 1, name: 'John Doe' };
+        // Resolve the Promise with fetched data
+        resolve(data);
+        // Reject the Promise on failure
+        // reject(new Error('Data fetching failed'));
+      }, 2000);
+    });
+
+    // Using the Promise
+    fetchData
+      .then(data => console.log('Fetched data:', data))
+      .catch(error => console.error('Error:', error));
+  </pre>
+
+  <h3>2. Asynchronous vs. Synchronous JavaScript</h3>
+  <p>Asynchronous JavaScript allows multiple tasks to be executed concurrently, improving performance and responsiveness. Synchronous JavaScript executes tasks one after another, blocking the execution until each task is completed.</p>
+  <p>Example:</p>
+  <pre>
+    // Asynchronous Example (Using setTimeout)
+    console.log('Start');
+    setTimeout(() => {
+      console.log('Async Task Completed');
+    }, 1000);
+    console.log('End');
+
+    // Synchronous Example (Using for loop)
+    console.log('Start');
+    for (let i = 0; i < 1000000000; i++) {
+      // Heavy computation
+    }
+    console.log('Sync Task Completed');
+    console.log('End');
+  </pre>
+
+  <script>
+    // Basic example: Fetch user data from the API
+    function getUserData() {
+      fetch('https://jsonplaceholder.typicode.com/users/1')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('userDataResult').textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+          console.error('Error fetching user data:', error);
+        });
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+

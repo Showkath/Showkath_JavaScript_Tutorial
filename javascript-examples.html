@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Basics</title>
+  <meta name="author" content="Showkath">
+  <meta name="author" content="Showkath" href="https://www.linkedin.com/in/showkath/">
+  <meta name="publisher" content="Showkath" email="iamshowkath@gmail.com">
+
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      margin-top: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    p {
+      margin-top: 10px;
+    }
+    input, button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Showkath Learning School</h1>
+   
+  </header>
+  <h1>JavaScript Basics</h1>
+  <p>This page contains examples of basic JavaScript functions with explanations.</p>
+
+  <h2>Function: greetUser</h2>
+  <p>This function displays a greeting message to the user.</p>
+  <button onclick="greetUser()">Click Me</button>
+
+  <h2>Function: sumNumbers</h2>
+  <p>This function calculates the sum of two numbers.</p>
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+  <button onclick="sumNumbers()">Calculate Sum</button>
+  <p id="sumResult"></p>
+
+  <h2>Function: generateRandomNumber</h2>
+  <p>This function generates a random number between 1 and 10 and displays it.</p>
+  <button onclick="generateRandomNumber()">Generate Random Number</button>
+  <p id="randomNumber"></p>
+
+  <h2>Function: checkEvenOdd</h2>
+  <p>This function checks if a number entered by the user is even or odd and displays the result.</p>
+  <input type="number" id="numToCheck" placeholder="Enter a number">
+  <button onclick="checkEvenOdd()">Check Even/Odd</button>
+  <p id="evenOddResult"></p>
+
+  <h2>Function: displayMultiplicationTable</h2>
+  <p>This function generates and displays the multiplication table of a number entered by the user.</p>
+  <input type="number" id="numForTable" placeholder="Enter a number">
+  <button onclick="displayMultiplicationTable()">Display Table</button>
+  <p id="multiplicationTable"></p>
+
+  <h2>Function: capitalizeString</h2>
+  <p>This function capitalizes the first letter of a string entered by the user.</p>
+  <input type="text" id="stringToCapitalize" placeholder="Enter a string">
+  <button onclick="capitalizeString()">Capitalize</button>
+  <p id="capitalizedString"></p>
+
+  <h2>Function: reverseString</h2>
+  <p>This function reverses a string entered by the user.</p>
+  <input type="text" id="stringToReverse" placeholder="Enter a string">
+  <button onclick="reverseString()">Reverse</button>
+  <p id="reversedString"></p>
+
+  <h2>Function: findLargestNumber</h2>
+  <p>This function finds the largest number from a list of numbers entered by the user.</p>
+  <input type="text" id="numList" placeholder="Enter numbers separated by commas">
+  <button onclick="findLargestNumber()">Find Largest Number</button>
+  <p id="largestNumber"></p>
+
+  <h2>Function: countVowels</h2>
+  <p>This function counts the number of vowels in a string entered by the user.</p>
+  <input type="text" id="stringToCountVowels" placeholder="Enter a string">
+  <button onclick="countVowels()">Count Vowels</button>
+  <p id="vowelCount"></p>
+
+  <h2>Function: isPalindrome</h2>
+  <p>This function checks if a string entered by the user is a palindrome.</p>
+  <input type="text" id="stringToCheckPalindrome" placeholder="Enter a string">
+  <button onclick="isPalindrome()">Check Palindrome</button>
+  <p id="palindromeResult"></p>
+
+  <h2>Function: calculateFactorial</h2>
+  <p>This function calculates the factorial of a number entered by the user.</p>
+  <input type="number" id="numForFactorial" placeholder="Enter a number">
+  <button onclick="calculateFactorial()">Calculate Factorial</button>
+  <p id="factorialResult"></p>
+
+  <h2>Function: findPrimeNumbers</h2>
+  <p>This function finds and displays all prime numbers up to a number entered by the user.</p>
+  <input type="number" id="numForPrime" placeholder="Enter a number">
+  <button onclick="findPrimeNumbers()">Find Prime Numbers</button>
+  <p id="primeNumbers"></p>
+
+  <h2>Function: calculatePower</h2>
+  <p>This function calculates the power of a base number raised to an exponent entered by the user.</p>
+  <input type="number" id="baseNumber" placeholder="Enter the base number">
+  <input type="number" id="exponentNumber" placeholder="Enter the exponent">
+  <button onclick="calculatePower()">Calculate Power</button>
+  <p id="powerResult"></p>
+
+  <h2>Function: countCharacters</h2>
+  <p>This function counts the number of characters in a string entered by the user.</p>
+  <input type="text" id="stringToCountCharacters" placeholder="Enter a string">
+  <button onclick="countCharacters()">Count Characters</button>
+  <p id="characterCount"></p>
+
+  <h2>Function: concatenateStrings</h2>
+  <p>This function concatenates two strings entered by the user.</p>
+  <input type="text" id="string1" placeholder="Enter the first string">
+  <input type="text" id="string2" placeholder="Enter the second string">
+  <button onclick="concatenateStrings()">Concatenate Strings</button>
+  <p id="concatenatedString"></p>
+
+  <h2>Function: findLongestWord</h2>
+  <p>This function finds the longest word in a sentence entered by the user.</p>
+  <input type="text" id="sentence" placeholder="Enter a sentence">
+  <button onclick="findLongestWord()">Find Longest Word</button>
+  <p id="longestWord"></p>
+
+  <h2>Function: calculateAverage</h2>
+  <p>This function calculates the average of numbers entered by the user.</p>
+  <input type="text" id="numListAverage" placeholder="Enter numbers separated by commas">
+  <button onclick="calculateAverage()">Calculate Average</button>
+  <p id="averageResult"></p>
+
+  <h2>Function: formatDate</h2>
+  <p>This function formats the current date in the format "YYYY-MM-DD".</p>
+  <button onclick="formatDate()">Format Date</button>
+  <p id="formattedDate"></p>
+
+  <h2>Function: generateRandomPassword</h2>
+  <p>This function generates a random password of a specified length.</p>
+  <input type="number" id="passwordLength" placeholder="Enter the password length">
+  <button onclick="generateRandomPassword()">Generate Random Password</button>
+  <p id="randomPassword"></p>
+
+  <h2>Function: showCurrentTime</h2>
+  <p>This function displays the current time in the format "HH:MM:SS".</p>
+  <button onclick="showCurrentTime()">Show Current Time</button>
+  <p id="currentTime"></p>
+
+  <h2>Function: playSound</h2>
+  <p>This function plays a sound when a button is clicked.</p>
+  <button onclick="playSound()">Play Sound</button>
+
+  <h2>Function: changeBackgroundColor</h2>
+  <p>This function changes the background color of the page when a button is clicked.</p>
+  <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+  <h2>Function: hideElement</h2>
+  <p>This function hides an element when a button is clicked.</p>
+  <button onclick="hideElement()">Hide Element</button>
+  <p id="elementToHide">This element will be hidden.</p>
+
+  <h2>Function: calculateSquareRoot</h2>
+  <p>This function calculates the square root of a number entered by the user.</p>
+  <input type="number" id="numForSquareRoot" placeholder="Enter a number">
+  <button onclick="calculateSquareRoot()">Calculate Square Root</button>
+  <p id="squareRootResult"></p>
+
+  <h2>Function: generateRandomColor</h2>
+  <p>This function generates a random color and applies it to the background.</p>
+  <button onclick="generateRandomColor()">Generate Random Color</button>
+
+  <h2>Function: showHideElement</h2>
+  <p>This function shows or hides an element when a button is clicked.</p>
+  <button onclick="showHideElement()">Show/Hide Element</button>
+  <p id="elementToShowHide">This element can be shown or hidden.</p>
+
+  <h2>Function: calculateBMI</h2>
+  <p>This function calculates the Body Mass Index (BMI) using height and weight entered by the user.</p>
+  <input type="number" id="heightInCm" placeholder="Enter height in cm">
+  <input type="number" id="weightInKg" placeholder="Enter weight in kg">
+  <button onclick="calculateBMI()">Calculate BMI</button>
+  <p id="bmiResult"></p>
+
+  <h2>Function: convertToCelsius</h2>
+  <p>This function converts temperature from Fahrenheit to Celsius.</p>
+  <input type="number" id="fahrenheitTemp" placeholder="Enter temperature in Fahrenheit">
+  <button onclick="convertToCelsius()">Convert to Celsius</button>
+  <p id="celsiusTemp"></p>
+
+  <h2>Function: playVideo</h2>
+  <p>This function plays a video when a button is clicked.</p>
+  <button onclick="playVideo()">Play Video</button>
+  <video id="videoPlayer" width="320" height="240">
+    <source src="path/to/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h2>Function: calculateAge</h2>
+  <p>This function calculates the age based on the birth year entered by the user.</p>
+  <input type="number" id="birthYear" placeholder="Enter birth year">
+  <button onclick="calculateAge()">Calculate Age</button>
+  <p id="ageResult"></p>
+
+  <h2>Function: isLeapYear</h2>
+  <p>This function checks if a year entered by the user is a leap year.</p>
+  <input type="number" id="yearToCheck" placeholder="Enter a year">
+  <button onclick="isLeapYear()">Check Leap Year</button>
+  <p id="leapYearResult"></p>
+
+  <h2>Function: randomElementFromArray</h2>
+  <p>This function picks a random element from an array of options.</p>
+  <button onclick="randomElementFromArray()">Pick Random Element</button>
+  <p id="randomElement"></p>
+
+  <h2>Function: scrollToTop</h2>
+  <p>This function scrolls the page to the top when a button is clicked.</p>
+  <button onclick="scrollToTop()">Scroll to Top</button>
+
+  <h2>Function: countDown</h2>
+  <p>This function creates a countdown timer and displays the remaining time.</p>
+  <input type="number" id="countdownTime" placeholder="Enter time in seconds">
+  <button onclick="countDown()">Start Countdown</button>
+  <p id="countdownDisplay"></p>
+
+  <!-- Additional examples -->
+
+  <h2>Function: calculateAreaOfRectangle</h2>
+  <p>This function calculates the area of a rectangle based on the width and height entered by the user.</p>
+  <input type="number" id="rectangleWidth" placeholder="Enter width">
+  <input type="number" id="rectangleHeight" placeholder="Enter height">
+  <button onclick="calculateAreaOfRectangle()">Calculate Area</button>
+  <p id="rectangleArea"></p>
+
+  <h2>Function: generateTable</h2>
+  <p>This function generates a multiplication table for a number entered by the user.</p>
+  <input type="number" id="tableNumber" placeholder="Enter a number">
+  <button onclick="generateTable()">Generate Table</button>
+  <table id="multiplicationTable"></table>
+
+  <h2>Function: isPrime</h2>
+  <p>This function checks if a number entered by the user is a prime number.</p>
+  <input type="number" id="numberToCheckPrime" placeholder="Enter a number">
+  <button onclick="isPrime()">Check Prime</button>
+  <p id="primeCheckResult"></p>
+
+  <h2>Function: reverseArray</h2>
+  <p>This function reverses an array entered by the user and displays the reversed array.</p>
+  <input type="text" id="arrayToReverse" placeholder="Enter elements separated by commas">
+  <button onclick="reverseArray()">Reverse Array</button>
+  <p id="reversedArray"></p>
+
+  <h2>Function: capitalizeAllWords</h2>
+  <p>This function capitalizes all words in a sentence entered by the user.</p>
+  <input type="text" id="sentenceToCapitalize" placeholder="Enter a sentence">
+  <button onclick="capitalizeAllWords()">Capitalize Words</button>
+  <p id="capitalizedWords"></p>
+
+  <h2>Function: calculateHypotenuse</h2>
+  <p>This function calculates the length of the hypotenuse of a right-angled triangle based on the lengths of its two sides.</p>
+  <input type="number" id="sideA" placeholder="Enter length of side A">
+  <input type="number" id="sideB" placeholder="Enter length of side B">
+  <button onclick="calculateHypotenuse()">Calculate Hypotenuse</button>
+  <p id="hypotenuseResult"></p>
+
+  <h2>Function: findLargestNumber</h2>
+  <p>This function finds the largest number among a list of numbers entered by the user.</p>
+  <input type="text" id="numbersToCompare" placeholder="Enter numbers separated by commas">
+  <button onclick="findLargestNumber()">Find Largest Number</button>
+  <p id="largestNumber"></p>
+
+  <h2>Function: truncateText</h2>
+  <p>This function truncates a long text to a specified length entered by the user.</p>
+  <input type="text" id="longText" placeholder="Enter long text">
+  <input type="number" id="textLength" placeholder="Enter desired text length">
+  <button onclick="truncateText()">Truncate Text</button>
+  <p id="truncatedText"></p>
+
+  <h2>Function: calculateFactorial</h2>
+  <p>This function calculates the factorial of a number entered by the user.</p>
+  <input type="number" id="numberForFactorial" placeholder="Enter a number">
+  <button onclick="calculateFactorial()">Calculate Factorial</button>
+  <p id="factorialResult"></p>
+
+  <h2>Function: isPalindrome</h2>
+  <p>This function checks if a word entered by the user is a palindrome.</p>
+  <input type="text" id="wordToCheckPalindrome" placeholder="Enter a word">
+  <button onclick="isPalindrome()">Check Palindrome</button>
+  <p id="palindromeCheckResult"></p>
+
+  <script>
+    // Function to greet the user
+    function greetUser() {
+      alert("Hello, welcome to JavaScript basics!");
+    }
+
+    // Function to calculate the sum of two numbers
+    function sumNumbers() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      const sum = num1 + num2;
+      document.getElementById("sumResult").textContent = "Sum: " + sum;
+    }
+
+    // Function to generate and display a random number
+    function generateRandomNumber() {
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      document.getElementById("randomNumber").textContent = "Random Number: " + randomNumber;
+    }
+
+    // Function to check if a number is even or odd
+    function checkEvenOdd() {
+      const numToCheck = parseFloat(document.getElementById("numToCheck").value);
+      if (numToCheck % 2 === 0) {
+        document.getElementById("evenOddResult").textContent = numToCheck + " is Even.";
+      } else {
+        document.getElementById("evenOddResult").textContent = numToCheck + " is Odd.";
+      }
+    }
+
+    // Function to display the multiplication table of a number
+    function displayMultiplicationTable() {
+      const numForTable = parseFloat(document.getElementById("numForTable").value);
+      let table = "";
+      for (let i = 1; i <= 10; i++) {
+        table += numForTable + " x " + i + " = " + (numForTable * i) + "<br>";
+      }
+      document.getElementById("multiplicationTable").innerHTML = table;
+    }
+
+    // Function to capitalize the first letter of a string
+    function capitalizeString() {
+      const stringToCapitalize = document.getElementById("stringToCapitalize").value;
+      const capitalizedString = stringToCapitalize.charAt(0).toUpperCase() + stringToCapitalize.slice(1);
+      document.getElementById("capitalizedString").textContent = "Capitalized: " + capitalizedString;
+    }
+
+    // Function to reverse a string
+    function reverseString() {
+      const stringToReverse = document.getElementById("stringToReverse").value;
+      const reversedString = stringToReverse.split("").reverse().join("");
+      document.getElementById("reversedString").textContent = "Reversed: " + reversedString;
+    }
+
+    // Function to find the largest number from a list of numbers
+    function findLargestNumber() {
+      const numList = document.getElementById("numList").value;
+      const numbersArray = numList.split(",").map(Number);
+      const largestNumber = Math.max(...numbersArray);
+      document.getElementById("largestNumber").textContent = "Largest Number: " + largestNumber;
+    }
+
+    // Function to count the number of vowels in a string
+    function countVowels() {
+      const stringToCountVowels = document.getElementById("stringToCountVowels").value;
+      const vowelCount = stringToCountVowels.match(/[aeiou]/gi)?.length || 0;
+      document.getElementById("vowelCount").textContent = "Vowel Count: " + vowelCount;
+    }
+
+    // Function to check if a string is a palindrome
+    function isPalindrome() {
+      const stringToCheckPalindrome = document.getElementById("stringToCheckPalindrome").value.toLowerCase();
+      const reversedString = stringToCheckPalindrome.split("").reverse().join("");
+      const palindromeResult = stringToCheckPalindrome === reversedString ? "Yes, it is a palindrome." : "No, it is not a palindrome.";
+      document.getElementById("palindromeResult").textContent = palindromeResult;
+    }
+
+    // Function to calculate the factorial of a number
+    function calculateFactorial() {
+      const numForFactorial = parseFloat(document.getElementById("numForFactorial").value);
+      let factorial = 1;
+      for (let i = 2; i <= numForFactorial; i++) {
+        factorial *= i;
+      }
+      document.getElementById("factorialResult").textContent = "Factorial: " + factorial;
+    }
+
+    // Function to find all prime numbers up to a given number
+    function findPrimeNumbers() {
+      const numForPrime = parseFloat(document.getElementById("numForPrime").value);
+      let primes = [];
+      for (let i = 2; i <= numForPrime; i++) {
+        let isPrime = true;
+        for (let j = 2; j < i; j++) {
+          if (i % j === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          primes.push(i);
+        }
+      }
+      document.getElementById("primeNumbers").textContent = "Prime Numbers: " + primes.join(", ");
+    }
+
+    // Function to calculate the power of a base number raised to an exponent
+    function calculatePower() {
+      const baseNumber = parseFloat(document.getElementById("baseNumber").value);
+      const exponentNumber = parseFloat(document.getElementById("exponentNumber").value);
+      const powerResult = Math.pow(baseNumber, exponentNumber);
+      document.getElementById("powerResult").textContent = "Result: " + powerResult;
+    }
+
+    // Function to count the number of characters in a string
+    function countCharacters() {
+      const stringToCountCharacters = document.getElementById("stringToCountCharacters").value;
+      const characterCount = stringToCountCharacters.length;
+      document.getElementById("characterCount").textContent = "Character Count: " + characterCount;
+    }
+
+    // Function to concatenate two strings
+    function concatenateStrings() {
+      const string1 = document.getElementById("string1").value;
+      const string2 = document.getElementById("string2").value;
+      const concatenatedString = string1 + " " + string2;
+      document.getElementById("concatenatedString").textContent = "Concatenated String: " + concatenatedString;
+    }
+
+    // Function to find the longest word in a sentence
+    function findLongestWord() {
+      const sentence = document.getElementById("sentence").value;
+      const words = sentence.split(" ");
+      let longestWord = "";
+      for (let i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+          longestWord = words[i];
+        }
+      }
+      document.getElementById("longestWord").textContent = "Longest Word: " + longestWord;
+    }
+
+    // Function to calculate the average of numbers
+    function calculateAverage() {
+      const numListAverage = document.getElementById("numListAverage").value;
+      const numbersArray = numListAverage.split(",").map(Number);
+      const sum = numbersArray.reduce((total, num) => total + num, 0);
+      const average = sum / numbersArray.length;
+      document.getElementById("averageResult").textContent = "Average: " + average.toFixed(2);
+    }
+
+    // Function to format the current date
+    function formatDate() {
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = (currentDate.getMonth() + 1).toString().padStart(2, "0");
+      const day = currentDate.getDate().toString().padStart(2, "0");
+      const formattedDate = year + "-" + month + "-" + day;
+      document.getElementById("formattedDate").textContent = "Formatted Date: " + formattedDate;
+    }
+
+    // Function to generate a random password
+    function generateRandomPassword() {
+      const passwordLength = parseInt(document.getElementById("passwordLength").value);
+      const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      let password = "";
+      for (let i = 0; i < passwordLength; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset.charAt(randomIndex);
+      }
+      document.getElementById("randomPassword").textContent = "Random Password: " + password;
+    }
+
+    // Function to display the current time
+    function showCurrentTime() {
+      const currentTime = new Date();
+      const hours = currentTime.getHours().toString().padStart(2, "0");
+      const minutes = currentTime.getMinutes().toString().padStart(2, "0");
+      const seconds = currentTime.getSeconds().toString().padStart(2, "0");
+      const formattedTime = hours + ":" + minutes + ":" + seconds;
+      document.getElementById("currentTime").textContent = "Current Time: " + formattedTime;
+    }
+
+    // Function to play a sound
+    function playSound() {
+      const audio = new Audio('path/to/sound.mp3');
+      audio.play();
+    }
+
+    // Function to change the background color
+    function changeBackgroundColor() {
+      const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#ffff00'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    // Function to hide an element
+    function hideElement() {
+      const elementToHide = document.getElementById('elementToHide');
+      elementToHide.style.display = 'none';
+    }
+
+    // Function to calculate the square root
+    function calculateSquareRoot() {
+      const numForSquareRoot = parseFloat(document.getElementById("numForSquareRoot").value);
+      const squareRoot = Math.sqrt(numForSquareRoot);
+      document.getElementById("squareRootResult").textContent = "Square Root: " + squareRoot.toFixed(2);
+    }
+
+    // Function to generate a random color
+    function generateRandomColor() {
+      const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    // Function to show or hide an element
+    function showHideElement() {
+      const elementToShowHide = document.getElementById("elementToShowHide");
+      elementToShowHide.style.display = elementToShowHide.style.display === "none" ? "block" : "none";
+    }
+
+    // Function to calculate BMI
+    function calculateBMI() {
+      const heightInCm = parseFloat(document.getElementById("heightInCm").value);
+      const weightInKg = parseFloat(document.getElementById("weightInKg").value);
+      const heightInM = heightInCm / 100;
+      const bmi = weightInKg / (heightInM * heightInM);
+      document.getElementById("bmiResult").textContent = "BMI: " + bmi.toFixed(2);
+    }
+
+    // Function to convert temperature from Fahrenheit to Celsius
+    function convertToCelsius() {
+      const fahrenheitTemp = parseFloat(document.getElementById("fahrenheitTemp").value);
+      const celsiusTemp = (fahrenheitTemp - 32) * 5/9;
+      document.getElementById("celsiusTemp").textContent = "Temperature in Celsius: " + celsiusTemp.toFixed(2) + " °C";
+    }
+
+    // Function to play a video
+    function playVideo() {
+      const videoPlayer = document.getElementById("videoPlayer");
+      if (videoPlayer.paused) {
+        videoPlayer.play();
+      } else {
+        videoPlayer.pause();
+      }
+    }
+
+    // Function to calculate age
+    function calculateAge() {
+      const birthYear = parseInt(document.getElementById("birthYear").value);
+      const currentYear = new Date().getFullYear();
+      const age = currentYear - birthYear;
+      document.getElementById("ageResult").textContent = "Age: " + age;
+    }
+
+    // Function to check if a year is a leap year
+    function isLeapYear() {
+      const yearToCheck = parseInt(document.getElementById("yearToCheck").value);
+      const isLeap = (yearToCheck % 4 === 0 && yearToCheck % 100 !== 0) || (yearToCheck % 400 === 0);
+      document.getElementById("leapYearResult").textContent = isLeap ? "Leap Year" : "Not a Leap Year";
+    }
+
+    // Function to pick a random element from an array
+    function randomElementFromArray() {
+      const options = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
+      const randomIndex = Math.floor(Math.random() * options.length);
+      document.getElementById("randomElement").textContent = "Random Element: " + options[randomIndex];
+    }
+
+    // Function to scroll to the top of the page
+    function scrollToTop() {
+      window.scrollTo(0, 0);
+    }
+
+    // Function to create a countdown timer
+    function countDown() {
+      let seconds = parseInt(document.getElementById("countdownTime").value);
+      const countdownDisplay = document.getElementById("countdownDisplay");
+      countdownDisplay.textContent = "Time remaining: " + seconds + " seconds";
+      const countdownInterval = setInterval(() => {
+        seconds--;
+        countdownDisplay.textContent = "Time remaining: " + seconds + " seconds";
+        if (seconds <= 0) {
+          clearInterval(countdownInterval);
+          countdownDisplay.textContent = "Countdown finished!";
+        }
+      }, 1000);
+    }
+
+    // Function to calculate the area of a rectangle
+    function calculateAreaOfRectangle() {
+      const width = parseFloat(document.getElementById("rectangleWidth").value);
+      const height = parseFloat(document.getElementById("rectangleHeight").value);
+      const area = width * height;
+      document.getElementById("rectangleArea").textContent = "Area: " + area;
+    }
+
+    // Function to generate a multiplication table
+    function generateTable() {
+      const tableNumber = parseInt(document.getElementById("tableNumber").value);
+      const table = document.getElementById("multiplicationTable");
+      table.innerHTML = ""; // Clear existing table content
+      for (let i = 1; i <= 10; i++) {
+        const row = table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        cell1.textContent = tableNumber + " x " + i;
+        cell2.textContent = tableNumber * i;
+      }
+    }
+
+    // Function to check if a number is prime
+    function isPrime() {
+      const numberToCheckPrime = parseInt(document.getElementById("numberToCheckPrime").value);
+      if (numberToCheckPrime <= 1) {
+        document.getElementById("primeCheckResult").textContent = "Not a Prime Number";
+        return;
+      }
+      for (let i = 2; i <= Math.sqrt(numberToCheckPrime); i++) {
+        if (numberToCheckPrime % i === 0) {
+          document.getElementById("primeCheckResult").textContent = "Not a Prime Number";
+          return;
+        }
+      }
+      document.getElementById("primeCheckResult").textContent = "Prime Number";
+    }
+
+    // Function to reverse an array
+    function reverseArray() {
+      const arrayToReverse = document.getElementById("arrayToReverse").value.split(",");
+      const reversedArray = arrayToReverse.reverse().join(",");
+      document.getElementById("reversedArray").textContent = "Reversed Array: " + reversedArray;
+    }
+
+    // Function to capitalize all words in a sentence
+    function capitalizeAllWords() {
+      const sentenceToCapitalize = document.getElementById("sentenceToCapitalize").value;
+      const capitalizedWords = sentenceToCapitalize.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+      document.getElementById("capitalizedWords").textContent = "Capitalized Words: " + capitalizedWords;
+    }
+
+    // Function to calculate the hypotenuse of a right-angled triangle
+    function calculateHypotenuse() {
+      const sideA = parseFloat(document.getElementById("sideA").value);
+      const sideB = parseFloat(document.getElementById("sideB").value);
+      const hypotenuse = Math.sqrt(sideA * sideA + sideB * sideB);
+      document.getElementById("hypotenuseResult").textContent = "Hypotenuse: " + hypotenuse.toFixed(2);
+    }
+
+    // Function to find the largest number among a list of numbers
+    function findLargestNumber() {
+      const numbersToCompare = document.getElementById("numbersToCompare").value.split(",").map(Number);
+      const largestNumber = Math.max(...numbersToCompare);
+      document.getElementById("largestNumber").textContent = "Largest Number: " + largestNumber;
+    }
+
+    // Function to truncate a long text to a specified length
+    function truncateText() {
+      const longText = document.getElementById("longText").value;
+      const textLength = parseInt(document.getElementById("textLength").value);
+      const truncatedText = longText.length > textLength ? longText.slice(0, textLength) + "..." : longText;
+      document.getElementById("truncatedText").textContent = "Truncated Text: " + truncatedText;
+    }
+
+    // Function to calculate the factorial of a number
+    function calculateFactorial() {
+      const numberForFactorial = parseInt(document.getElementById("numberForFactorial").value);
+      let factorial = 1;
+      for (let i = 1; i <= numberForFactorial; i++) {
+        factorial *= i;
+      }
+      document.getElementById("factorialResult").textContent = "Factorial: " + factorial;
+    }
+
+    // Function to check if a word is a palindrome
+    function isPalindrome() {
+      const wordToCheckPalindrome = document.getElementById("wordToCheckPalindrome").value;
+      const reversedWord = wordToCheckPalindrome.split("").reverse().join("");
+      const isPalindrome = wordToCheckPalindrome.toLowerCase() === reversedWord.toLowerCase();
+      document.getElementById("palindromeCheckResult").textContent = isPalindrome ? "Palindrome" : "Not a Palindrome";
+    }
+  </script>
+   <footer>
+    <p>&copy; 2023 Showkath Learning School | <a href="https://www.linkedin.com/in/showkath/">LinkedIn</a></p>
+  </footer>
+</body>
+</html>
